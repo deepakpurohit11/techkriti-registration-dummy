@@ -1,173 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Techkriti — Official Registration Portal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Techkriti 2025 — Registration Portal</title>
 
 <style>
-/* -------------------------------- */
-/* GLOBAL THEME COLORS */
-/* -------------------------------- */
-:root {
-  --primary: #0b63d6;
-  --primary-light: #5aa9ff;
-  --bg: #eaf3ff;
-  --white: #ffffff;
-  --dark: #0d1b2a;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+    }
 
-/* -------------------------------- */
-/* PAGE BASE STYLING */
-/* -------------------------------- */
-body {
-  margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background: var(--bg);
-  color: var(--dark);
-}
+    body {
+        background: linear-gradient(135deg, #d9eaff, #bcd7ff, #e1eeff);
+        padding: 0;
+        margin: 0;
+    }
 
-/* -------------------------------- */
-/* HEADER */
-/* -------------------------------- */
-header {
-  width: 100%;
-  background: var(--primary);
-  padding: 18px 32px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-}
+    /* HEADER */
+    header {
+        width: 100%;
+        padding: 25px 40px;
+        background: rgba(255,255,255,0.35);
+        backdrop-filter: blur(10px);
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        border-bottom: 1px solid rgba(255,255,255,0.4);
+    }
 
-header img {
-  height: 48px;
-  animation: fadeIn 1.2s ease-out;
-}
+    header img {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        background: white;
+        padding: 8px;
+        transition: 0.3s ease;
+    }
+    header img:hover {
+        transform: scale(1.08);
+    }
 
-header h1 {
-  margin: 0;
-  color: white;
-  font-size: 26px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  animation: slideDown 1s ease-out;
-}
+    header h1 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #003f88;
+    }
 
-/* -------------------------------- */
-/* HERO BANNER */
-/* -------------------------------- */
-.banner {
-  margin: 24px auto;
-  width: 90%;
-  max-width: 1100px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  padding: 28px;
-  color: white;
-  border-radius: 18px;
-  font-size: 22px;
-  line-height: 1.5;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-  animation: fadeIn 1.3s ease-out;
-}
+    /* MAIN CARD */
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 40px;
+        background: rgba(255,255,255,0.75);
+        border-radius: 18px;
+        box-shadow: 0 8px 40px rgba(0,0,0,0.09);
+        backdrop-filter: blur(6px);
+        animation: fadeIn 1s ease-out;
+    }
 
-/* -------------------------------- */
-/* MAIN CONTENT CARD */
-/* -------------------------------- */
-.card {
-  background: var(--white);
-  width: 90%;
-  max-width: 1100px;
-  margin: 24px auto;
-  padding: 34px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  animation: fadeInUp 1s ease-out;
-}
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
 
-h2 {
-  margin-top: 0;
-  font-size: 28px;
-  color: var(--primary);
-}
+    h2 {
+        font-size: 30px;
+        color: #0046a3;
+        margin-bottom: 15px;
+    }
 
-/* -------------------------------- */
-/* GOOGLE FORM EMBED */
-/* -------------------------------- */
-.form-container {
-  margin-top: 24px;
-  border-radius: 16px;
-  overflow: hidden;
-  height: 900px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-}
+    p, li {
+        font-size: 18px;
+        color: #333;
+        line-height: 1.6;
+    }
 
-/* -------------------------------- */
-/* ANIMATIONS */
-/* -------------------------------- */
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
+    ul { margin-left: 20px; }
 
-@keyframes fadeInUp {
-  from {opacity: 0; transform: translateY(25px);}
-  to {opacity: 1; transform: translateY(0);}
-}
+    /* FORM IFRAME CARD */
+    .form-box {
+        width: 100%;
+        margin-top: 30px;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+        padding: 10px;
+        overflow: hidden;
+        border: 1px solid #cfe2ff;
+    }
 
-@keyframes slideDown {
-  from {opacity: 0; transform: translateY(-12px);}
-  to {opacity: 1; transform: translateY(0);}
-}
+    iframe {
+        width: 100%;
+        height: 900px;
+        border: none;
+    }
+
 </style>
 </head>
 
 <body>
 
-<!-- -------------------------------- -->
-<!-- HEADER WITH IITK LOGO -->
-<!-- -------------------------------- -->
 <header>
-  <img src="https://home.iitk.ac.in/~kamalkk/Main_files/logo_black.png" alt="IIT Kanpur Logo" />
-  <h1>Techkriti — Official Registration Portal</h1>
+    <img src="https://home.iitk.ac.in/~kamalkk/Main_files/logo_black.png" alt="IITK Logo">
+    <h1>Techkriti — Official Registration Portal</h1>
 </header>
 
-<!-- -------------------------------- -->
-<!-- BANNER -->
-<!-- -------------------------------- -->
-<div class="banner">
-  Experience innovation, creativity & culture at IIT Kanpur.  
-  Register below to participate in special Techkriti activities.
-</div>
+<div class="container">
+    
+    <h2>About the Visit</h2>
 
-<!-- -------------------------------- -->
-<!-- MAIN CONTENT CARD -->
-<!-- -------------------------------- -->
-<div class="card">
-  <h2>About the Visit</h2>
-  <p>
-    Techkriti is a student-run technical and cultural festival at IIT Kanpur.
-    This registration portal is for external students interested in literature
-    and cultural activities.
-  </p>
+    <p>Techkriti is a student-run technical and cultural festival at IIT Kanpur. This registration 
+    portal is for external students interested in literature and cultural activities.</p>
 
-  <ul>
-    <li><strong>Dates:</strong> [insert dates]</li>
-    <li><strong>Venue:</strong> IIT Kanpur Campus</li>
-    <li><strong>Contact:</strong> organizing@techkriti.iitk.example</li>
-  </ul>
+    <ul>
+        <li><strong>Dates:</strong> [insert dates]</li>
+        <li><strong>Venue:</strong> IIT Kanpur Campus</li>
+        <li><strong>Contact:</strong> organizing@techkriti.iitk.example</li>
+    </ul>
 
-  <h2>Registration Form</h2>
+    <h2 style="margin-top: 30px;">Registration Form</h2>
 
-  <!-- GOOGLE FORM EMBED BELOW -->
-  <div class="form-container">
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfGuDRC3P3HNYowlSMMwJWwbBQbpt7jii3IrUhjAZ2DQb5pDQ/viewform?embedded=true"
-      width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
-      loading="lazy">
-      Loading…
-    </iframe>
-  </div>
+    <div class="form-box">
+        <iframe src="<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfGuDRC3P3HNYowlSMMwJWwbBQbpt7jii3IrUhjAZ2DQb5pDQ/viewform?embedded=true" width="640" height="2090" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>"></iframe>
+    </div>
+
 </div>
 
 </body>
