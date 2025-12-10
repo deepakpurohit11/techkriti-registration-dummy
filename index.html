@@ -1,159 +1,174 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Techkriti Registration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Techkriti — Official Registration Portal</title>
 
 <style>
-    /* GLOBAL COLORS */
-    :root{
-        --iitk-blue:#003f72;
-        --accent:#0b63d6;
-        --light:#f4f8ff;
-        --card-bg:#ffffff;
-    }
+/* -------------------------------- */
+/* GLOBAL THEME COLORS */
+/* -------------------------------- */
+:root {
+  --primary: #0b63d6;
+  --primary-light: #5aa9ff;
+  --bg: #eaf3ff;
+  --white: #ffffff;
+  --dark: #0d1b2a;
+}
 
-    body{
-        margin:0;
-        font-family:Inter,system-ui,Segoe UI,Roboto,Arial;
-        background:linear-gradient(135deg,#eef5ff,#d9e9ff);
-    }
+/* -------------------------------- */
+/* PAGE BASE STYLING */
+/* -------------------------------- */
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+}
 
-    /* HEADER */
-    .header{
-        background:var(--iitk-blue);
-        color:white;
-        padding:22px 30px;
-        display:flex;
-        align-items:center;
-        gap:18px;
-        box-shadow:0 4px 20px rgba(0,0,0,0.15);
-        animation:fadeDown 0.8s ease-out;
-    }
-    .header img{
-        height:60px;
-        width:60px;
-        border-radius:50%;
-        background:white;
-        padding:8px;
-    }
-    .header h1{
-        margin:0;
-        font-size:28px;
-        letter-spacing:-0.5px;
-    }
+/* -------------------------------- */
+/* HEADER */
+/* -------------------------------- */
+header {
+  width: 100%;
+  background: var(--primary);
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
 
-    @keyframes fadeDown {
-        from { opacity:0; transform:translateY(-20px); }
-        to   { opacity:1; transform:translateY(0); }
-    }
+header img {
+  height: 48px;
+  animation: fadeIn 1.2s ease-out;
+}
 
-    /* BANNER */
-    .banner{
-        margin:20px auto;
-        padding:22px;
-        width:90%;
-        max-width:950px;
-        background:linear-gradient(135deg,#0b63d6,#4da3ff);
-        color:white;
-        border-radius:16px;
-        font-size:20px;
-        box-shadow:0 6px 25px rgba(0,0,0,0.20);
-        animation:pop 1s ease-out;
-    }
+header h1 {
+  margin: 0;
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  animation: slideDown 1s ease-out;
+}
 
-    @keyframes pop {
-        0%   { transform:scale(.95); opacity:0; }
-        100% { transform:scale(1); opacity:1; }
-    }
+/* -------------------------------- */
+/* HERO BANNER */
+/* -------------------------------- */
+.banner {
+  margin: 24px auto;
+  width: 90%;
+  max-width: 1100px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  padding: 28px;
+  color: white;
+  border-radius: 18px;
+  font-size: 22px;
+  line-height: 1.5;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  animation: fadeIn 1.3s ease-out;
+}
 
-    /* MAIN SECTION */
-    .container{
-        max-width:1000px;
-        margin:20px auto;
-        background:var(--card-bg);
-        padding:30px;
-        border-radius:16px;
-        box-shadow:0 8px 26px rgba(0,0,0,0.12);
-        animation:fadeIn 1s ease-out;
-    }
+/* -------------------------------- */
+/* MAIN CONTENT CARD */
+/* -------------------------------- */
+.card {
+  background: var(--white);
+  width: 90%;
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 34px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  animation: fadeInUp 1s ease-out;
+}
 
-    @keyframes fadeIn {
-        from { opacity:0; transform:translateY(10px); }
-        to   { opacity:1; transform:translateY(0); }
-    }
+h2 {
+  margin-top: 0;
+  font-size: 28px;
+  color: var(--primary);
+}
 
-    h2{
-        margin-top:0;
-        color:var(--iitk-blue);
-        font-size:26px;
-        margin-bottom:8px;
-    }
+/* -------------------------------- */
+/* GOOGLE FORM EMBED */
+/* -------------------------------- */
+.form-container {
+  margin-top: 24px;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 900px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
 
-    p, li{
-        font-size:17px;
-        color:#333;
-    }
+/* -------------------------------- */
+/* ANIMATIONS */
+/* -------------------------------- */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 
-    /* GOOGLE FORM */
-    iframe{
-        width:100%;
-        height:900px;
-        border:0;
-        border-radius:12px;
-        box-shadow:0 4px 20px rgba(0,0,0,0.20);
-    }
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(25px);}
+  to {opacity: 1; transform: translateY(0);}
+}
 
-    /* FOOTER */
-    footer{
-        margin-top:40px;
-        text-align:center;
-        font-size:14px;
-        color:#555;
-        padding:20px;
-    }
+@keyframes slideDown {
+  from {opacity: 0; transform: translateY(-12px);}
+  to {opacity: 1; transform: translateY(0);}
+}
 </style>
 </head>
 
 <body>
 
+<!-- -------------------------------- -->
 <!-- HEADER WITH IITK LOGO -->
-<div class="header">
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/IIT_Kanpur_Logo.svg/480px-IIT_Kanpur_Logo.svg.png" alt="IITK Logo">
-    <h1>Techkriti — Official Registration Portal</h1>
-</div>
+<!-- -------------------------------- -->
+<header>
+  <img src="https://home.iitk.ac.in/~kamalkk/Main_files/logo_black.png" alt="IIT Kanpur Logo" />
+  <h1>Techkriti — Official Registration Portal</h1>
+</header>
 
-<!-- BEAUTIFUL BANNER -->
+<!-- -------------------------------- -->
+<!-- BANNER -->
+<!-- -------------------------------- -->
 <div class="banner">
-    Experience innovation, culture & creativity at IIT Kanpur.  
-    Fill the registration form below to participate in special Techkriti sessions.
+  Experience innovation, creativity & culture at IIT Kanpur.  
+  Register below to participate in special Techkriti activities.
 </div>
 
-<!-- MAIN CONTENT -->
-<div class="container">
-    <h2>About the Visit</h2>
-    <p>
-        Techkriti is a student-run technical and cultural festival at IIT Kanpur.  
-        This registration is for external students interested in literature and cultural activities.
-    </p>
+<!-- -------------------------------- -->
+<!-- MAIN CONTENT CARD -->
+<!-- -------------------------------- -->
+<div class="card">
+  <h2>About the Visit</h2>
+  <p>
+    Techkriti is a student-run technical and cultural festival at IIT Kanpur.
+    This registration portal is for external students interested in literature
+    and cultural activities.
+  </p>
 
-    <ul>
-        <li><b>Dates:</b> [insert dates]</li>
-        <li><b>Venue:</b> IIT Kanpur Campus</li>
-        <li><b>Contact:</b> organizing@techkriti.iitk.example</li>
-    </ul>
+  <ul>
+    <li><strong>Dates:</strong> [insert dates]</li>
+    <li><strong>Venue:</strong> IIT Kanpur Campus</li>
+    <li><strong>Contact:</strong> organizing@techkriti.iitk.example</li>
+  </ul>
 
-    <h2>Registration Form</h2>
+  <h2>Registration Form</h2>
 
-    <!-- EMBED GOOGLE FORM HERE -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfGuDRC3P3HNYowlSMMwJWwbBQbpt7jii3IrUhjAZ2DQb5pDQ/viewform?embedded=true"></iframe>
-
+  <!-- GOOGLE FORM EMBED BELOW -->
+  <div class="form-container">
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfGuDRC3P3HNYowlSMMwJWwbBQbpt7jii3IrUhjAZ2DQb5pDQ/viewform?embedded=true"
+      width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
+      loading="lazy">
+      Loading…
+    </iframe>
+  </div>
 </div>
-
-<footer>
-    © Techkriti Organizing Committee, IIT Kanpur · This page is publicly hosted.
-</footer>
 
 </body>
 </html>
