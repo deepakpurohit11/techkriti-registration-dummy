@@ -1,134 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Techkriti 2025 — Registration Portal</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Techkriti 2026 – Official Registration Portal</title>
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Inter", sans-serif;
-    }
-
+    /* Global dark bluish gradient background */
     body {
-        background: linear-gradient(135deg, #d9eaff, #bcd7ff, #e1eeff);
-        padding: 0;
         margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(180deg, #0b1e39, #112b4a, #16406b);
+        color: #ffffff;
     }
 
-    /* HEADER */
-    header {
-        width: 100%;
-        padding: 25px 40px;
-        background: rgba(255,255,255,0.35);
-        backdrop-filter: blur(10px);
+    /* Header */
+    .header {
         display: flex;
         align-items: center;
-        gap: 18px;
-        border-bottom: 1px solid rgba(255,255,255,0.4);
+        padding: 25px 40px;
+        gap: 15px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
-    header img {
-        height: 60px;
-        width: 60px;
-        border-radius: 50%;
-        background: white;
-        padding: 8px;
-        transition: 0.3s ease;
-    }
-    header img:hover {
-        transform: scale(1.08);
+    .header img {
+        height: 55px;
     }
 
-    header h1 {
-        font-size: 32px;
-        font-weight: 700;
-        color: #003f88;
+    .header-title {
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
     }
 
-    /* MAIN CARD */
-    .container {
-        width: 90%;
+    /* Blue Highlight Banner */
+    .banner {
+        margin: 30px auto;
+        padding: 25px;
         max-width: 1200px;
-        margin: 40px auto;
-        padding: 40px;
-        background: rgba(255,255,255,0.75);
-        border-radius: 18px;
-        box-shadow: 0 8px 40px rgba(0,0,0,0.09);
-        backdrop-filter: blur(6px);
-        animation: fadeIn 1s ease-out;
+        background: linear-gradient(135deg, #1e4fa8, #2564d8);
+        border-radius: 14px;
+        color: white;
+        font-size: 22px;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        animation: fadeIn 1.5s ease;
     }
 
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
+    /* Main content card */
+    .card {
+        background: rgba(255,255,255,0.08);
+        padding: 35px;
+        max-width: 1200px;
+        margin: 25px auto;
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+        backdrop-filter: blur(8px);
+        animation: slideUp 1.2s ease;
     }
 
     h2 {
-        font-size: 30px;
-        color: #0046a3;
+        font-size: 32px;
         margin-bottom: 15px;
+        color: #76a9ff;
     }
 
-    p, li {
-        font-size: 18px;
-        color: #333;
-        line-height: 1.6;
+    ul li {
+        margin: 10px 0;
+        font-size: 20px;
     }
 
-    ul { margin-left: 20px; }
-
-    /* FORM IFRAME CARD */
-    .form-box {
-        width: 100%;
-        margin-top: 30px;
-        background: white;
-        border-radius: 16px;
-        box-shadow: 0 6px 25px rgba(0,0,0,0.08);
-        padding: 10px;
-        overflow: hidden;
-        border: 1px solid #cfe2ff;
+    /* Embedded form container */
+    .form-wrap {
+        background: rgba(255,255,255,0.06);
+        padding: 25px;
+        border-radius: 14px;
+        margin-top: 20px;
+        box-shadow: 0 5px 18px rgba(0,0,0,0.2);
     }
 
     iframe {
+        border-radius: 12px;
         width: 100%;
-        height: 900px;
+        height: 2050px;
         border: none;
     }
 
+    /* Footer */
+    footer {
+        text-align: center;
+        margin: 40px 0;
+        opacity: 0.7;
+        font-size: 16px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {opacity: 0; transform: scale(0.98);}
+        to {opacity: 1; transform: scale(1);}
+    }
+
+    @keyframes slideUp {
+        from {opacity: 0; transform: translateY(40px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
 </style>
 </head>
 
 <body>
 
-<header>
-    <img src="https://home.iitk.ac.in/~kamalkk/Main_files/logo_black.png" alt="IITK Logo">
-    <h1>Techkriti — Official Registration Portal</h1>
-</header>
+<!-- Header with IITK Logo -->
+<div class="header">
+    <img src="https://home.iitk.ac.in/~kamalkk/Main_files/logo_black.png" alt="IITK Logo" />
+    <div class="header-title">Techkriti — Official Registration Portal</div>
+</div>
 
-<div class="container">
-    
+<!-- Highlight Banner -->
+<div class="banner">
+    Experience innovation, culture & creativity at IIT Kanpur.  
+    Register now to join exclusive Techkriti events & sessions!
+</div>
+
+<!-- About Section -->
+<div class="card">
     <h2>About the Visit</h2>
-
-    <p>Techkriti is a student-run technical and cultural festival at IIT Kanpur. This registration 
-    portal is for external students interested in literature and cultural activities.</p>
+    <p style="font-size:20px; line-height:1.6;">
+        Techkriti is a student-run technical and cultural festival at IIT Kanpur.
+        This registration portal is for external students interested in literature  
+        and cultural activities.
+    </p>
 
     <ul>
-        <li><strong>Dates:</strong> [insert dates]</li>
-        <li><strong>Venue:</strong> IIT Kanpur Campus</li>
-        <li><strong>Contact:</strong> organizing@techkriti.iitk.example</li>
+        <li><b>Dates:</b> [insert dates]</li>
+        <li><b>Venue:</b> IIT Kanpur Campus</li>
+        <li><b>Contact:</b> organizing@techkriti.iitk.example</li>
     </ul>
-
-    <h2 style="margin-top: 30px;">Registration Form</h2>
-
-    <div class="form-box">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfGuDRC3P3HNYowlSMMwJWwbBQbpt7jii3IrUhjAZ2DQb5pDQ/viewform?embedded=true" width="640" height="2090" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>"></iframe>
-    </div>
-
 </div>
+
+<!-- Registration Form -->
+<div class="card">
+    <h2>Registration Form</h2>
+
+    <div class="form-wrap">
+
+        <!-- Google Form Embedded -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfGuDRC3P3HNYowlSMMwJWwbBQbpt7jii3IrUhjAZ2DQb5pDQ/viewform?embedded=true">
+            Loading…
+        </iframe>
+
+    </div>
+</div>
+
+<footer>
+    © Techkriti, IIT Kanpur — All Rights Reserved.
+</footer>
 
 </body>
 </html>
