@@ -1,69 +1,138 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Techkriti 2025 — Registration</title>
-  <style>
-    /* Simple modern styles — tweak if you want */
-    :root{--maxw:900px;--accent:#0b63d6}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;background:#f6f8fb;color:#111}
-    .container{max-width:var(--maxw);margin:32px auto;padding:28px;background:#fff;border-radius:12px;box-shadow:0 6px 24px rgba(15,20,30,0.06)}
-    header{display:flex;align-items:center;gap:16px}
-    .logo{height:56px;width:56px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#5bc0ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
-    h1{margin:0;font-size:22px}
-    p.lead{margin:8px 0 18px;color:#444}
-    .grid{display:grid;grid-template-columns:1fr;gap:18px}
-    .card{padding:14px;border-radius:8px;background:#fbfdff;border:1px solid #eef3ff}
-    .cta{display:flex;gap:12px;align-items:center}
-    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
-    .form-wrap{border-radius:8px;overflow:hidden}
-    iframe{width:100%;min-height:720px;border:0}
-    footer{margin-top:18px;color:#666;font-size:13px}
-    @media(min-width:820px){.grid{grid-template-columns:1fr 420px}}
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Techkriti 2025 — Registration</title>
+
+<style>
+
+/* ===== GLOBAL PAGE THEME ===== */
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  background: linear-gradient(135deg, #0b0f1f, #1a1f35, #111622);
+  color: #fff;
+  min-height: 100vh;
+  padding: 30px;
+  animation: fadeIn 1.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== LEFT EVENT CARD ===== */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
+  width: 420px;
+  animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+  from {transform: translateY(40px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+.card h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #6bc6ff, #00eaff);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+.card ul {
+  margin-top: 10px;
+  padding-left: 18px;
+  line-height: 1.7;
+}
+
+.card strong {
+  color: #63d7ff;
+}
+
+/* ===== FORM CONTAINER ===== */
+.form-box {
+  width: 520px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 10px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.35);
+  animation: slideUp 1.4s ease-out;
+}
+
+.form-box iframe {
+  width: 100%;
+  height: 700px;
+  border: none;
+  border-radius: 16px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <div class="logo">TK</div>
-      <div>
-        <h1>Techkriti 2025 — Registration</h1>
-        <p class="lead">Open registration for literature and arts students. Fill the form to join select Techkriti sessions and campus activities.</p>
-      </div>
-    </header>
 
-    <div class="grid" style="margin-top:18px">
-      <div>
-        <div class="card">
-          <h3>About the visit</h3>
-          <p>Techkriti is a student-run technical and cultural festival at IIT Kanpur. The registration below is for external students interested in literature and cultural sessions. Please carry your student ID to the campus gate.</p>
-          <ul>
-            <li><strong>Dates:</strong> [insert dates]</li>
-            <li><strong>Venue:</strong> IIT Kanpur Campus</li>
-            <li><strong>Contact:</strong> organizing@techkriti.iitk.example (replace with your committee email)</li>
-          </ul>
-        </div>
+<div class="container">
 
-        <div class="card" style="margin-top:12px">
-          <h3>Instructions for attendees</h3>
-          <ol>
-            <li>Register using the form to receive a confirmation email.</li>
-            <li>Keep a screenshot of the registration and your student ID for campus entry.</li>
-            <li>If you need any assistance, contact the event helpdesk at the contact email.</li>
-          </ol>
-        </div>
-      </div>
+  <!-- LEFT INFORMATION CARD -->
+  <div class="card">
+    <h1>Techkriti 2025 — Registration</h1>
 
-      <div class="form-wrap">
-        <!-- REPLACE the src value below with the embed src from your Google Form -->
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfGuDRC3P3HNYowlSMMwJWwbBQbpt7jii3IrUhjAZ2DQb5pDQ/viewform?embedded=true" width="640" height="2090" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-      </div>
-    </div>
+    <p>
+      Open registration for literature & arts students visiting IIT Kanpur.
+      Please fill the form to join select Techkriti sessions.
+    </p>
 
-    <footer>
-      <p>Organized by the Techkriti Organizing Committee. This page is hosted publicly; do not share personal sensitive data beyond the required registration fields.</p>
-    </footer>
+    <h2>About the visit</h2>
+
+    <ul>
+      <li><strong>Dates:</strong> [insert dates]</li>
+      <li><strong>Venue:</strong> IIT Kanpur Campus</li>
+      <li><strong>Contact:</strong> organizing@techkriti.iitk.example</li>
+    </ul>
+
+    <p>Please carry your student ID to the campus gate.</p>
   </div>
+
+  <!-- RIGHT GOOGLE FORM -->
+  <div class="form-box">
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfGuDRC3P3HNYowlSMMwJWwbBQbpt7jii3IrUhjAZ2DQb5pDQ/viewform?embedded=true"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+</div>
+
+<footer>Organized by the Techkriti Organizing Committee.</footer>
+
 </body>
 </html>
