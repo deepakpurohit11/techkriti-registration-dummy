@@ -1,140 +1,159 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Techkriti 2026 — Registration</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Techkriti Registration</title>
 
 <style>
+    /* GLOBAL COLORS */
+    :root{
+        --iitk-blue:#003f72;
+        --accent:#0b63d6;
+        --light:#f4f8ff;
+        --card-bg:#ffffff;
+    }
 
-/* ===== GLOBAL PAGE THEME ===== */
-body {
-  margin: 0;
-  font-family: Poppins, sans-serif;
-  background: linear-gradient(135deg, #0b0f1f, #1a1f35, #111622);
-  color: #fff;
-  min-height: 100vh;
-  padding: 30px;
-  animation: fadeIn 1.2s ease-out;
-}
+    body{
+        margin:0;
+        font-family:Inter,system-ui,Segoe UI,Roboto,Arial;
+        background:linear-gradient(135deg,#eef5ff,#d9e9ff);
+    }
 
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
+    /* HEADER */
+    .header{
+        background:var(--iitk-blue);
+        color:white;
+        padding:22px 30px;
+        display:flex;
+        align-items:center;
+        gap:18px;
+        box-shadow:0 4px 20px rgba(0,0,0,0.15);
+        animation:fadeDown 0.8s ease-out;
+    }
+    .header img{
+        height:60px;
+        width:60px;
+        border-radius:50%;
+        background:white;
+        padding:8px;
+    }
+    .header h1{
+        margin:0;
+        font-size:28px;
+        letter-spacing:-0.5px;
+    }
 
-/* ===== MAIN CONTAINER ===== */
-.container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+    @keyframes fadeDown {
+        from { opacity:0; transform:translateY(-20px); }
+        to   { opacity:1; transform:translateY(0); }
+    }
 
-/* ===== LEFT EVENT CARD ===== */
-.card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
-  width: 420px;
-  animation: slideUp 1s ease-out;
-}
+    /* BANNER */
+    .banner{
+        margin:20px auto;
+        padding:22px;
+        width:90%;
+        max-width:950px;
+        background:linear-gradient(135deg,#0b63d6,#4da3ff);
+        color:white;
+        border-radius:16px;
+        font-size:20px;
+        box-shadow:0 6px 25px rgba(0,0,0,0.20);
+        animation:pop 1s ease-out;
+    }
 
-@keyframes slideUp {
-  from {transform: translateY(40px); opacity: 0;}
-  to {transform: translateY(0); opacity: 1;}
-}
+    @keyframes pop {
+        0%   { transform:scale(.95); opacity:0; }
+        100% { transform:scale(1); opacity:1; }
+    }
 
-.card h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  background: linear-gradient(90deg, #6bc6ff, #00eaff);
-  -webkit-background-clip: text;
-  color: transparent;
-  font-weight: 700;
-}
+    /* MAIN SECTION */
+    .container{
+        max-width:1000px;
+        margin:20px auto;
+        background:var(--card-bg);
+        padding:30px;
+        border-radius:16px;
+        box-shadow:0 8px 26px rgba(0,0,0,0.12);
+        animation:fadeIn 1s ease-out;
+    }
 
-.card ul {
-  margin-top: 10px;
-  padding-left: 18px;
-  line-height: 1.7;
-}
+    @keyframes fadeIn {
+        from { opacity:0; transform:translateY(10px); }
+        to   { opacity:1; transform:translateY(0); }
+    }
 
-.card strong {
-  color: #63d7ff;
-}
+    h2{
+        margin-top:0;
+        color:var(--iitk-blue);
+        font-size:26px;
+        margin-bottom:8px;
+    }
 
-/* ===== FORM CONTAINER ===== */
-.form-box {
-  width: 520px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 18px;
-  padding: 10px;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.35);
-  animation: slideUp 1.4s ease-out;
-}
+    p, li{
+        font-size:17px;
+        color:#333;
+    }
 
-.form-box iframe {
-  width: 100%;
-  height: 700px;
-  border: none;
-  border-radius: 16px;
-}
+    /* GOOGLE FORM */
+    iframe{
+        width:100%;
+        height:900px;
+        border:0;
+        border-radius:12px;
+        box-shadow:0 4px 20px rgba(0,0,0,0.20);
+    }
 
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 14px;
-  opacity: 0.7;
-}
-
+    /* FOOTER */
+    footer{
+        margin-top:40px;
+        text-align:center;
+        font-size:14px;
+        color:#555;
+        padding:20px;
+    }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER WITH IITK LOGO -->
+<div class="header">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/IIT_Kanpur_Logo.svg/480px-IIT_Kanpur_Logo.svg.png" alt="IITK Logo">
+    <h1>Techkriti — Official Registration Portal</h1>
+</div>
+
+<!-- BEAUTIFUL BANNER -->
+<div class="banner">
+    Experience innovation, culture & creativity at IIT Kanpur.  
+    Fill the registration form below to participate in special Techkriti sessions.
+</div>
+
+<!-- MAIN CONTENT -->
 <div class="container">
-
-  <!-- LEFT INFORMATION CARD -->
-  <div class="card">
-    <h1>Techkriti 2026 — Registration</h1>
-
+    <h2>About the Visit</h2>
     <p>
-      Open registration for literature & arts students visiting IIT Kanpur.
-      Please fill form to get a chance to attend the Techkriti sessions.
-      If selected, the travel and stay will be sponsored by the respective committees.
+        Techkriti is a student-run technical and cultural festival at IIT Kanpur.  
+        This registration is for external students interested in literature and cultural activities.
     </p>
 
-    <h2>About the visit</h2>
-
     <ul>
-      <li><strong>Dates:</strong> Tentative March</li>
-      <li><strong>Venue:</strong> IIT Kanpur Campus</li>
-      <li><strong>Coordination Team:</strong> IIT Kanpur Techriti Team</li>
+        <li><b>Dates:</b> [insert dates]</li>
+        <li><b>Venue:</b> IIT Kanpur Campus</li>
+        <li><b>Contact:</b> organizing@techkriti.iitk.example</li>
     </ul>
 
-    <p>Please carry your student ID/government ID to the campus gate.</p>
-    <p>The campus is taking focused steps to increase the participation of girl students with a literature background, especially from the Northeast, Bihar, Jharkhand and West Bengal, where representation has traditionally been low. Selected participants will receive full support, including a sponsored trip, accommodation and food.</p>
-  </div>
+    <h2>Registration Form</h2>
 
-  <!-- RIGHT GOOGLE FORM -->
-  <div class="form-box">
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfGuDRC3P3HNYowlSMMwJWwbBQbpt7jii3IrUhjAZ2DQb5pDQ/viewform?embedded=true"
-      allowfullscreen>
-    </iframe>
-  </div>
+    <!-- EMBED GOOGLE FORM HERE -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfGuDRC3P3HNYowlSMMwJWwbBQbpt7jii3IrUhjAZ2DQb5pDQ/viewform?embedded=true"></iframe>
 
 </div>
 
-<footer>Organized by the Techkriti Organizing Committee</footer>
+<footer>
+    © Techkriti Organizing Committee, IIT Kanpur · This page is publicly hosted.
+</footer>
 
 </body>
 </html>
