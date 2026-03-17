@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e, #3a0ca3, #7209b7, #f72585);
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Animated background */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ❤️ Floating hearts background */
+.hearts {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.hearts span {
+    position: absolute;
+    bottom: -20px;
+    font-size: 18px;
+    animation: floatUp 8s linear infinite;
+    opacity: 0.4;
+}
+
+/* random positions */
+.hearts span:nth-child(1) { left: 10%; animation-duration: 8s; }
+.hearts span:nth-child(2) { left: 25%; animation-duration: 10s; }
+.hearts span:nth-child(3) { left: 40%; animation-duration: 7s; }
+.hearts span:nth-child(4) { left: 60%; animation-duration: 11s; }
+.hearts span:nth-child(5) { left: 75%; animation-duration: 9s; }
+.hearts span:nth-child(6) { left: 90%; animation-duration: 8s; }
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 22px;
+    font-size: 28px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    z-index: 1;
+}
+
+/* Container */
+.container {
+    flex: 1;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    z-index: 1;
+}
+
+/* Section */
+.section {
+    flex: 1;
+    padding: 25px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: 0.4s;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+/* Divider */
+.divider {
+    width: 2px;
+    background: rgba(255,255,255,0.25);
+}
+
+/* Text */
+h2 {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.timer {
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffd166;
+    text-shadow: 0 0 10px rgba(255, 209, 102, 0.5);
+}
+
+.input-title {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+/* Input */
+textarea {
+    width: 100%;
+    height: 90px;
+    border-radius: 12px;
+    border: none;
+    padding: 12px;
+    resize: none;
+    outline: none;
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+textarea:focus {
+    background: rgba(255,255,255,0.25);
+}
+
+/* Button */
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ff4d6d, #ff758f);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* 📱 MOBILE FIX */
+/* ========================= */
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        font-size: 22px;
+    }
+
+    .timer {
+        font-size: 26px;
+    }
+}
+
+
+
+
+/* NEW CSS */
+
+
+/* Note text */
+.note-text {
+    font-size: 14px;
+    margin: 10px 0 20px;
+    opacity: 0.9;
+    text-align: center;
+}
+
+/* Card grid */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+/* Card */
+.card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(255, 100, 150, 0.4);
+}
+
+/* Image */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Buttons */
+.card-buttons {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+}
+
+.select-btn {
+    flex: 1;
+    background: linear-gradient(135deg, #ff4d6d, #ff758f);
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.detail-btn {
+    flex: 1;
+    text-align: center;
+    background: rgba(255,255,255,0.2);
+    border-radius: 8px;
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+
+/* Hover effects */
+.select-btn:hover {
+    transform: scale(1.05);
+}
+
+.detail-btn:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* POPUP CSS */
+
+/* Popup background */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup box */
+.popup-content {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    width: 300px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* Text */
+#popup-text {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Buttons */
+.popup-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+#confirmBtn {
+    flex: 1;
+    background: #ff4d6d;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+#cancelBtn {
+    flex: 1;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+#confirmBtn:hover {
+    transform: scale(1.05);
+}
+#cancelBtn:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+
+.card h3 {
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card-buttons a {
+    text-decoration: none;
+    color: white;
+    background: rgba(255,255,255,0.15);
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.card-buttons a:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.card-buttons a {
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.2);
+}

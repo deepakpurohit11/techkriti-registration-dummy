@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Website from Deepu To Babu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="hearts">
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+</div>
+
+<header>Website from Deepu To Babu</header>
+
+<div class="container">
+
+    <!-- Left Section -->
+<div class="section">
+    <!-- <h2>Ye wo timer hai jo ye bata rha hai ki options kitni der mein aayenge</h2> -->
+    <div class="timer" id="timer1"></div>
+
+    <p class="note-text">
+        Upar ka timer khatam hua aur niche rhe aapke options <br> Niche button diye gye hein <strong>Detail mein dekhne</strong> aur <strong>select krne ke liye</strong> kripya yadi aap detail mein product ko dekhne jayein to price pe dhyan na de maine waise hi bhot mehnge products nahi chune hein ❤️
+    </p>
+
+<div class="card-container">
+
+    <!-- 1 Bracelet -->
+    <div class="card">
+        <img src="images/Layered_Bracelet.png">
+        <h3>Layered Bracelet</h3>
+        <div class="card-buttons">
+            <button onclick="selectProduct(1, 'Layered Bracelet')">I WANT THIS ❤️</button>
+            <a href="https://www.bigbasket.com/pd/40355560/jewelz-boho-black-bead-charm-bracelet-1-pc/" target="_blank">See in detail</a>
+        </div>
+    </div>
+
+    <!-- 2 Necklace -->
+    <div class="card">
+        <img src="images/heartNecklace.png">
+        <h3>Heart Necklace ❤️</h3>
+        <div class="card-buttons">
+            <button onclick="selectProduct(2, 'Heart Necklace')">I WANT THIS ❤️</button>
+            <a href="https://www.meesho.com/elegant-heart-crystal-pendant-necklace-gold-plated/p/d8oook" target="_blank">See in detail</a>
+        </div>
+    </div>
+
+    <!-- 3 Golden Rose -->
+    <div class="card">
+        <img src="images/goldenRose.png">
+        <h3>Golden Rose 🌹</h3>
+        <div class="card-buttons">
+            <button onclick="selectProduct(3, 'Golden Rose')">I WANT THIS ❤️</button>
+            <a href="https://www.amazon.in/TRAIS-Gold-Plated-Artificial-Flower/dp/B0GJ4YY8JP" target="_blank">See in detail</a>
+        </div>
+    </div>
+
+    <!-- 4 Gift Hamper -->
+    <div class="card">
+        <img src="images/giftHamper.png">
+        <h3>Gift Hamper 🎁</h3>
+        <div class="card-buttons">
+            <button onclick="selectProduct(4, 'Gift Hamper')">I WANT THIS ❤️</button>
+            <a href="https://www.meesho.com/premium-cute-gift-hampers-for-girls-women-birthday-gift-wedding-gift-anniversary-gift-hampers-for-sister-luxury-stylish-gift-hampers-for-girls-perfect-premium-hampers-for-women-unique-cute-gift-for-birthday-wedding-anniversary/p/9do3lu" target="_blank">See in detail</a>
+        </div>
+    </div>
+
+    <!-- 5 Mug -->
+    <div class="card">
+        <img src="images/loveMug.png">
+        <h3>Love Mug ☕</h3>
+        <div class="card-buttons">
+            <button onclick="selectProduct(5, 'Love Mug')">I WANT THIS ❤️</button>
+            <a href="https://deodap.in/products/i-love-her-ceramic-coffee-mug-with-handle-romantic-gift-cup-for-girlfriend-wife-anniversary-valentine-s-day-birthday-special-occasions-white-printed-tea-coffee-cup" target="_blank">See in detail</a>
+        </div>
+    </div>
+
+    <!-- 6 Panda Necklace -->
+    <div class="card">
+        <img src="images/pandaNeclace.png">
+        <h3>Panda Necklace 🐼</h3>
+        <div class="card-buttons">
+            <button onclick="selectProduct(6, 'Panda Necklace')">I WANT THIS ❤️</button>
+            <a href="https://www.meesho.com/cute-panda-necklace-set-with-earrings-for-girls-stylish-fashion-jewellery-daily-wear-and-gift-iteam/p/cmykjk" target="_blank">See in detail</a>
+        </div>
+    </div>
+
+    <!-- 7 Couple Statue -->
+    <div class="card">
+        <img src="images/coupleShowpiece.png">
+        <h3>Couple Showpiece 💑</h3>
+        <div class="card-buttons">
+            <button onclick="selectProduct(7, 'Couple Showpiece')">I WANT THIS ❤️</button>
+            <a href="https://www.amazon.in/CraftVatika-Valentines-Decoration-Girlfriend-Centimeter/dp/B0CQH5VKSM" target="_blank">See in detail</a>
+        </div>
+    </div>
+
+</div>
+</div>
+    <!-- Right Section -->
+    <div class="section">
+        <div>
+            <h2>ye timer aapke options choose krne ka timer dikha rha hai, <br> Timer khatam hone se pehle kriypya apna product chun le</h2>
+            <div class="timer" id="timer2"></div>
+
+            <div class="input-title">
+                if you want to write something my jaan write it here and then submit, it will come to me ❤️
+            </div>
+            <textarea id="message1" placeholder="Write here..."></textarea>
+            <!-- <button>Submit</button> -->
+             <button onclick="sendMessage('message1')">Submit</button>
+        </div>
+    </div>
+
+</div>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <p id="popup-text"></p>
+
+        <div class="popup-buttons">
+            <button id="confirmBtn">Yes babu ❤️</button>
+            <button id="cancelBtn">No I want to change</button>
+        </div>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
